@@ -2,8 +2,12 @@
 
 import sys
 
-nums = 0.0
-nums = [ float(x) for x in sys.argv[1:]]
+ans = 0 
+for line in sys.stdin:
+    try:
+        ans += int(line)
+    except:
+        ans += float(line)
 
+print(ans)
 
-print(sum(nums))
